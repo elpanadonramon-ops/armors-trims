@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.16.+'
+	id 'fabric-loom' version '1.15.5'
 	id 'maven-publish'
 }
 
@@ -11,20 +11,13 @@ base {
 }
 
 repositories {
-	// Loom agrega automáticamente los repositorios necesarios
+	// Loom agrega los necesarios automáticamente
 }
 
 dependencies {
-	// Minecraft
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	
-	// Mojang Mappings oficiales
 	mappings loom.officialMojangMappings()
-	
-	// Fabric Loader
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-
-	// Fabric API
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 }
 
